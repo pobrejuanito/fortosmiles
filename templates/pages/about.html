@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+  <!--wrapper starts-->
+  <div id="wrapper"> 
+        <!--page_header starts-->
+        <div id="page_header">
+          <div class="container clearfix">
+            <div class="eight columns">
+              <h1>About <strong>Us</strong></h1>
+            </div>
+            <div class="eight columns">
+              <ul class="social">
+                <li>
+                  <p>LIKE US</p>
+                </li>
+                <li><a href="https://www.facebook.com/East-Ridge-Family-Dental-234901946564546/" target="_blank"><img src="{% static 'images/icons/facebook.png' %}" alt="icon"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--page_header ends--> 
+        
+    <!--content starts-->
+    <div id="content"> 
+            
+            <!--row one starts-->
+            <div class="container clearfix"> 
+              
+              <!--first column starts-->
+              <div class="two-thirds column">
+                <p class="text_big">If you’re searching for a great dentist for your whole family, East Ridge Family Dental is the answer. We proudly serve all child and adult general and cosmetic dentistry needs. Whether you need a basic dental check-up or an extraction, we’re here for you.
+                    </p>
+                <img src="{% static 'images/preview/slide-3.jpg' %}" width="610" alt="image" class="image_border">
+              </div>
+              <!--first column ends--> 
+              
+              <!--second column / owner list starts-->
+              <div class="one-third column">
+                <h2>Meet our <strong>Doctor</strong> <span>East Ridge Family Dental</span></h2>
+                <ul class="list_owner">
+                  
+                  <!--first owner starts-->
+                  <li><img src="{% static 'images/preview/carruthers.jpg' %}" alt="Dr. Curtis L. Carruthers">
+                    <h6>Dr. Curtis L. Carruthers <span>D.D.S</span></h6>
+                    <br class="clear"/>
+                    <p>A 2005 graduate of the University of Iowa College of Dentistry, he served as a faculty member at the University of Iowa before moving to Chattanooga in July 2011 to help start a community church in the area.</p>
+                  </li>
+                  <!--first owner ends--> 
+                  
+                </ul>
+              </div>
+              <!--second column ends--> 
+              
+              <!--divider here-->
+              <div class="divider sixteen columns"></div>
+            </div>
+            <!--row one ends--> 
+            
+            <!--row two starts-->
+            <div class="container clearfix"> 
+              
+              <!--first feature-->
+              <div class="four columns">
+                <div class="features"> <img src="{% static 'images/icons/icon-leaf.png' %}" width="55" height="55" alt="image">
+                  <p>feel at ease</p>
+                </div>
+              </div>
+              <div class="twelve columns">
+                <p>Even if you’ve had a bad dentistry experiences in the past, you’ll feel at ease at our comfortable office environment. We’re a family-oriented dental practice providing quality care for patients of all ages. We specialize in preventative maintenance and restorative dental health care.
+                    </p>
+              </div>
+              <div class="spacer_20px"></div>
+              
+              <!--second feature-->
+              <div class="twelve columns">
+                <p>Your dental health plays a large role in your overall health and happiness. We believe healthy smiles and confidence go hand in hand. Maintaining a healthy outlook on life and a beautiful smile takes more than regular brushing — it requires periodic professional care.</p>
+              </div>
+              <div class="four columns">
+                <div class="features"> <img src="{% static 'images/icons/icon-like-big.png' %}" width="50" height="44" alt="image">
+                  <p>healthy smiles</p>
+                </div>
+              </div>
+            </div>
+            <!--row two ends--> 
+        
+            <div class="clear"></div>
+          </div>
+          <!--content ends--> 
+
+        <div class="clear"></div>
+      </div>
+      <!--wrapper ends--> 
+{% endblock %}

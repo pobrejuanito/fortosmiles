@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+  <!--wrapper starts-->
+  <div id="wrapper"> 
+        <!--page_header starts-->
+        <div id="page_header">
+          <div class="container clearfix">
+            <div class="eight columns">
+              <h1>Request an <strong>Appointment</strong></h1>
+            </div>
+            <div class="eight columns">
+              <ul class="social">
+                <li>
+                  <p>LIKE US</p>
+                </li>
+                <li><a href="https://www.facebook.com/East-Ridge-Family-Dental-234901946564546/" target="_blank"><img src="{% static 'images/icons/facebook.png' %}" alt="icon"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--page_header ends--> 
+        
+        <!--content starts-->
+        <div id="content">
+          <div class="container clearfix"> 
+            <!--content_withsidebar starts-->
+            <div id="content_withsidebar" class="two-thirds column">
+              <p class="text_big"> To request an appointment fill this form. One of our receptionist will respond within a day with a confirmation of your appointment. </p>
+              
+              <!--appointment starts-->
+              <form id="appointmentform" method="post" action="/appointment/">
+                  {% csrf_token %}
+                <fieldset>
+                  <h5><strong>Appointment</strong> information &raquo; </h5>
+                  <br class="clear"/>
+                  <ul>
+                    <li>
+                      <label>Prefered Time*</label>
+                      <select name="booking_time" class="select_style">
+                        <option value="Morning">Morning</option>
+                        <option value="Noon">Noon</option>
+                        <option value="Afternoon">Afternoon</option>
+                      </select>
+                    </li>
+                    <li class="omega datetrigger_wrapper">
+                      <label>Preferred date*</label>
+                      <input name="booking_arrival_date" id="datepicker1" class="required date" type="text" />
+                    </li>
+                  </ul>
+                  <br class="clear"/>
+                  <h5><strong>Personal</strong> information &raquo; </h5>
+                  <br class="clear"/>
+                  <ul>
+                    <li>
+                      <label>Full Name* </label>
+                      <input name="booking_guest_name" class="required" />
+                    </li>
+                    <li>
+                      <label>Email* </label>
+                      <input name="booking_email" class="required email"/>
+                    </li>
+                    <li class="omega">
+                      <label>Phone </label>
+                      <input name="booking_phone" />
+                    </li>
+                    <li>
+                      <label>Message* </label>
+                      <textarea name="booking_comments" id="appoint_message" class="required"></textarea>
+                    </li>
+                    <li>
+                      <input class="appointment_submit" type="submit" value="Book My Appointment"/>
+                      <div id="result_appointment"></div>
+                    </li>
+                  </ul>
+                </fieldset>
+              </form>
+              <!--appointment ends--> 
+              
+            </div>
+            <!--content_withsidebar ends--> 
+            
+            <!--sidebar starts-->
+            <div class="one-third column">
+              <div id="sidebar"> 
+                
+                <!--some links-->
+                <i class="fa fa-ambulance" style="float:right; margin-right:25px; font-size: 60px;"></i>
+                <h2>Emergency <strong>Dental</strong> <span>We’re always here for you</span></h2>
+                <p>Call anytime for emergency dental services. Whether you’ve chipped a tooth or you are in a lot of pain, feel free to call us right away.</p>
+                <a href="tel:423-629-6015" class="link_style">Call 423-629-6015</a>
+                </div>
+              <div class="clear"></div>
+            </div>
+            <!--sidebar ends--> 
+            
+          </div>
+          <div class="clear"></div>
+        </div>
+        <!--content ends--> 
+
+        <div class="clear"></div>
+      </div>
+      <!--wrapper ends--> 
+{% endblock %}
